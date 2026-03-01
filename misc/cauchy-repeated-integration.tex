@@ -1,0 +1,138 @@
+\section*{Cauchy Formula for Repeated Integration}
+
+\subsection*{Basic understanding}
+
+\begin{enumerate}
+\item What problem does the Cauchy formula for repeated integration solve?
+
+\item What is meant by the "$n$-th repeated integral" of a function?
+
+\item Write the definition of the $n$-fold repeated integral of a function $f$ with the base point $a$:
+  \[
+    f^{(-n)}(x) = ?
+  \]
+
+\item Under what conditions on $f$ does the formula hold?
+
+\item What is the main result of the Cauchy formula for repeated integration? State it explicitly.
+\end{enumerate}
+
+\subsection*{Formula and structure}
+
+\begin{enumerate}
+\item Rewrite the repeated integral as a single integral:
+  \[
+    f^{(-n)}(x) = \frac{1}{(n-1)!} \int_a^x (x - t)^{n-1} f(t)\,dt.
+  \]
+
+\item What is the role of the factor $\frac{1}{(n-1)!}$?
+
+\item Why does the kernel $(x - t)^{n-1}$ appear in the formula?
+
+\item What happens in the special case $n = 1$? Verify that the formula reduces correctly.
+
+\item Compute explicitly $f^{(-2)}(x)$ using both:
+  \begin{itemize}
+    \item the definition (nested integrals),
+    \item the Cauchy formula,
+  \end{itemize}
+  and verify that they agree.
+\end{enumerate}
+
+\subsection*{Proof understanding}
+
+\begin{enumerate}
+\item What proof technique is used to prove the formula?
+
+\item What is the base case of the induction?
+
+\item Show that for $n=1$:
+  \[
+    f^{(-1)}(x) = \int_a^x f(t)\,dt.
+  \]
+
+\item What assumption is made in the induction step?
+
+\item What must be proven in the induction step?
+
+\item Where is the Leibniz integral rule used in the proof?
+
+\item Compute:
+  \[
+    \frac{d}{dx} \left[ \frac{1}{n!} \int_a^x (x - t)^n f(t)\,dt \right]
+  \]
+  and explain why it gives the desired recursive relation.
+
+\item How does the induction step transform an $(n+1)$-fold integral into the desired single-integral form?
+
+\item Why does the induction argument prove the formula for all $n \in \mathbb{N}$?
+\end{enumerate}
+
+\subsection*{Conceptual understanding}
+
+\begin{enumerate}
+\item Why can repeated integration be "compressed" into a single integral?
+
+\item How is this formula related to convolution?
+
+\item Interpret the kernel $(x - t)^{n-1}$ geometrically or intuitively.
+
+\item How does this formula simplify practical computations?
+
+\item In what situations is this formula especially useful?
+\end{enumerate}
+
+\subsection*{Generalizations}
+
+\begin{enumerate}
+\item How can the formula be extended to non-integer orders of integration?
+
+\item What replaces the factorial $(n-1)!$ in the generalized version?
+
+\item State the fractional integral version:
+  \[
+    (J^\alpha f)(x) = ?
+  \]
+
+\item What condition must $\alpha$ satisfy?
+
+\item What is the name of this generalization?
+
+\item How does the formula relate to fractional derivatives (when $\alpha < 0$)?
+\end{enumerate}
+
+\subsection*{Connections and further ideas}
+
+\begin{enumerate}
+\item How is this formula connected to fractional calculus?
+
+\item What is a differintegral?
+
+\item How can repeated integration be used to define differentiation of non-integer order?
+
+\item How is this formula generalized to higher dimensions?
+
+\item What is the Riesz potential?
+\end{enumerate}
+
+\subsection*{Practice problems}
+
+\begin{enumerate}
+\item Compute:
+  \[
+    \int_0^x \int_0^{t_1} t_2 \, dt_2 \, dt_1
+  \]
+  using the Cauchy formula.
+
+\item Compute the $n$-fold integral of $f(t) = 1$.
+
+\item Compute the $n$-fold integral of $f(t) = t^k$.
+
+\item Show that:
+  \[
+    (J^n f)(x) = (f * g_n)(x)
+  \]
+  for an appropriate kernel $g_n$.
+
+\item Verify the formula numerically for a simple function (e.g. $f(t)=e^t$).
+\end{enumerate}

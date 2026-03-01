@@ -1,0 +1,164 @@
+\section*{Jacobian Matrix and Determinant}
+
+\subsection*{Basic Definitions}
+
+\begin{enumerate}
+
+\item Let $F : \mathbb{R}^n \to \mathbb{R}^m$ be given by
+  \[
+    F(x_1,\dots,x_n) = (f_1(x),\dots,f_m(x)).
+  \]
+  What is the definition of the \emph{Jacobian matrix} $J_F(x)$?
+
+\item Write explicitly the Jacobian matrix:
+  \[
+    J_F(x) = \left( \frac{\partial f_i}{\partial x_j} \right).
+  \]
+  What are its dimensions?
+
+\item In which case is the Jacobian matrix square?
+
+\item When $m = n$, how is the \emph{Jacobian determinant} defined?
+
+\item What does the notation
+  \[
+    \det J_F(x)
+  \]
+  represent?
+
+\end{enumerate}
+
+\subsection*{Jacobian as Derivative}
+
+\begin{enumerate}
+
+\item How is the Jacobian matrix related to the total derivative (Fréchet derivative) of a function $F : \mathbb{R}^n \to \mathbb{R}^m$?
+
+\item State the linear approximation formula:
+  \[
+    F(x+h) \approx F(x) + J_F(x)h.
+  \]
+
+\item What does the Jacobian matrix represent geometrically at a point?
+
+\item What condition on $J_F(x)$ ensures that $F$ is locally invertible near $x$?
+
+\end{enumerate}
+
+\subsection*{Chain Rule}
+
+\begin{enumerate}
+
+\item Let $F : \mathbb{R}^n \to \mathbb{R}^m$ and $G : \mathbb{R}^m \to \mathbb{R}^p$.
+  State the multivariable chain rule for Jacobians:
+  \[
+    J_{G \circ F}(x) = ?
+  \]
+
+\item When $n=m=p$, what is the corresponding formula for determinants?
+
+\item Why does this imply
+  \[
+    \det J_{G \circ F}(x)
+    =
+    \det J_G(F(x)) \cdot \det J_F(x)?
+  \]
+
+\end{enumerate}
+
+\subsection*{Geometric Interpretation}
+
+\begin{enumerate}
+
+\item How does the Jacobian determinant describe local volume scaling?
+
+\item What does it mean if $\det J_F(x) > 0$?
+
+\item What does it mean if $\det J_F(x) < 0$?
+
+\item What does it mean if $\det J_F(x) = 0$?
+
+\item How does the absolute value $|\det J_F(x)|$ relate to infinitesimal volume elements?
+
+\end{enumerate}
+
+\subsection*{Change of Variables in Integration}
+
+\begin{enumerate}
+
+\item State the change-of-variables formula in $\mathbb{R}^n$:
+  \[
+    \int_{F(U)} g(y)\,dy
+    =
+    \int_U g(F(x))\, |\det J_F(x)| \, dx.
+  \]
+
+\item Why is the absolute value necessary?
+
+\item What conditions must $F$ satisfy for the change-of-variables formula to hold?
+
+\item Compute the Jacobian determinant for the transformation from Cartesian to polar coordinates:
+  \[
+    x = r\cos\theta, \quad y = r\sin\theta.
+  \]
+
+\item Why does the area element become
+  \[
+    dx\,dy = r\,dr\,d\theta?
+  \]
+
+\end{enumerate}
+
+\subsection*{Special Cases and Examples}
+
+\begin{enumerate}
+
+\item Compute the Jacobian matrix of
+  \[
+    F(x,y) = (x^2 y, e^{xy}).
+  \]
+
+\item Compute the Jacobian determinant of
+  \[
+    F(x,y) = (u,v)
+  \]
+  where
+  \[
+    u = x+y, \quad v = x-y.
+  \]
+
+\item For a linear transformation $F(x)=Ax$, what is $J_F(x)$?
+
+\item How is $\det J_F(x)$ related to $\det A$ in the linear case?
+
+\item If $F$ is a rotation in $\mathbb{R}^2$, what is its Jacobian determinant?
+
+\end{enumerate}
+
+\subsection*{Inverse Function Theorem}
+
+\begin{enumerate}
+
+\item State the inverse function theorem in terms of the Jacobian determinant.
+
+\item Why does $\det J_F(x_0) \neq 0$ imply local invertibility?
+
+\item How is the Jacobian of the inverse function expressed in terms of $J_F$?
+
+\end{enumerate}
+
+\subsection*{Higher Concepts}
+
+\begin{enumerate}
+
+\item How does the Jacobian generalize the derivative of a single-variable function?
+
+\item In what sense is the Jacobian matrix the best linear approximation?
+
+\item How does the determinant relate to orientation?
+
+\item What is the Jacobian in the context of manifolds and coordinate changes?
+
+\item How does the Jacobian relate to differential forms?
+
+\end{enumerate}

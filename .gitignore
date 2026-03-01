@@ -1,5 +1,12 @@
-.idea
-.vscode
-tmp
+.idea/
+.vscode/
+tmp/
+
+*.aux
+*.bak*
+*.dvi
+*.fdb*
+*.fls
 *.log
+*.out
 *~
