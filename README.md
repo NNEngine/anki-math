@@ -6,6 +6,10 @@ The `*.note` files are the source files for the notes in a simple and human-read
 
 The [notes.txt](./notes.txt) file is a compiled deck file that can be imported into Anki. It is created by the [notatki](https://github.com/aradzie/notatki) tool.
 
+# Tips on writing flashcards
+
+- [Effective Spaced Repetition](https://borretti.me/article/effective-spaced-repetition)
+
 # Free online resources for studying math
 
 - [LibreTexts Mathematics](https://math.libretexts.org/)
