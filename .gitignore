@@ -9,4 +9,7 @@ tmp/
 *.fls
 *.log
 *.out
+*.toc
 *~
+
+kindle-send*
