@@ -1,4 +1,5 @@
 \subsection{Conceptual Foundations}
+
 \begin{enumerate}[leftmargin=*, label=\textbf{Q\arabic*.}]
   \item State the \textbf{Implicit Function Theorem} (IFT) precisely. What are the hypotheses on $F : \mathbb{R}^{n+m} \to \mathbb{R}^m$, on the point $(a, b) \in \mathbb{R}^n \times \mathbb{R}^m$, and what does the conclusion guarantee?
   \item In the IFT, why is it necessary to require that the \textbf{partial Jacobian} $D_y F(a,b)$ is invertible (i.e.\ $\det D_y F(a,b) \neq 0$)? What can go wrong if this condition fails? Provide a concrete example.
@@ -9,6 +10,7 @@
 \end{enumerate}
 
 \subsection{Computing the Implicit Derivative}
+
 \begin{enumerate}[resume, leftmargin=*, label=\textbf{Q\arabic*.}]
   \item Derive the formula for the derivative $Dg(x)$ in terms of the partial derivatives of $F$. Starting from the identity $F(x, g(x)) = 0$, apply the chain rule and solve for $Dg(x)$.
   \item In the scalar case $F(x, y) = 0$ with $F : \mathbb{R}^2 \to \mathbb{R}$, write down the explicit formula
@@ -28,6 +30,7 @@
 \end{enumerate}
 
 \subsection{Geometric and Analytic Interpretation}
+
 \begin{enumerate}[resume, leftmargin=*, label=\textbf{Q\arabic*.}]
   \item Interpret the IFT geometrically: what does it say about the \textbf{level set} $\{(x,y) : F(x,y) = 0\}$ near a regular point?
   \item Define a \textbf{regular point} and a \textbf{critical point} of $F : \mathbb{R}^{n+m} \to \mathbb{R}^m$. How do these concepts relate to the hypothesis of the IFT?
@@ -36,6 +39,7 @@
 \end{enumerate}
 
 \subsection{Applications and Extensions}
+
 \begin{enumerate}[resume, leftmargin=*, label=\textbf{Q\arabic*.}]
   \item State the \textbf{rank theorem} (constant rank theorem). How does it generalise the IFT?
   \item In constrained optimisation, the method of \textbf{Lagrange multipliers} relies on the IFT. Explain what role the IFT plays in justifying why the constraint surface can be locally parameterised, thus reducing the problem.
@@ -46,6 +50,7 @@
 \end{enumerate}
 
 \subsection{Proof and Technique}
+
 \begin{enumerate}[resume, leftmargin=*, label=\textbf{Q\arabic*.}]
   \item Sketch the main idea of the \textbf{proof of the IFT}. Which fixed-point theorem (or contraction principle) is typically invoked, and how?
   \item In the proof of the IFT via the \textbf{Banach fixed-point theorem}, one defines an auxiliary map $T_x(y) = y - [D_y F(a,b)]^{-1} F(x,y)$. Explain why $T_x$ is a contraction on a suitable ball, and what the fixed point represents.
@@ -54,6 +59,7 @@
 \end{enumerate}
 
 \subsection{Quick-Fire Recall}
+
 \begin{enumerate}[resume, leftmargin=*, label=\textbf{Q\arabic*.}]
   \item True or False: if $F(a,b) = 0$ and $D_y F(a,b)$ is invertible, then $g$ is defined on all of $\mathbb{R}^n$.
   \item True or False: the IFT guarantees that $g$ is real-analytic whenever $F$ is real-analytic.
