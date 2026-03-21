@@ -18,4 +18,4 @@ cleanall:
 	latexmk -C
 
 format:
-	latexindent --silent --check --overwrite $(wildcard **/*.tex)
+	~/.cargo/bin/tex-fmt --nowrap **/*.tex
