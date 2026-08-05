@@ -1,0 +1,209 @@
+!type: Basic Math (and reversed card)
+!deck: Math
+!tags: Math Calculus Identity Laplace-Transform
+
+!id: NZYddeTg9i
+!front: \[ \mathscr{L} \{ 1 \} \]
+!back: \[ \frac{1}{s} \]
+~~~
+
+!id: 3KRahvnI04
+!front: \[ \mathscr{L} \{ t^n \}, \, n = 1, 2, 3, \ldots \]
+!back: \[ \frac{n!}{s^{n+1}} \]
+~~~
+
+!id: LNfz4L5hou
+!front: \[ \mathscr{L} \{ \sin(at) \} \]
+!back: \[ \frac{a}{s^2 + a^2} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+    \mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+    \mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+    \mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: tN7TTdycA6
+!front: \[ \mathscr{L} \{ \cos(at) \} \]
+!back: \[ \frac{s}{s^2 + a^2} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+    \mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+    \mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+    \mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: McDbGiS3cb
+!front: \[ \mathscr{L} \{ \sin(at + b) \} \]
+!back: \[ \frac{s \sin(b) + a \cos(b)}{s^2 + a^2} \]
+~~~
+
+!id: 6jEH3lz324
+!front: \[ \mathscr{L} \{ \cos(at + b) \} \]
+!back: \[ \frac{s \cos(b) - a \sin(b)}{s^2 + a^2} \]
+~~~
+
+!id: UNkLsfMEZl
+!front: \[ \mathscr{L} \{ t \sin(at) \} \]
+!back: \[ \frac{2as}{(s^2 + a^2)^2} \]
+~~~
+
+!id: vZYd04OPDq
+!front: \[ \mathscr{L} \{ t \cos(at) \} \]
+!back: \[ \frac{s^2 - a^2}{(s^2 + a^2)^2} \]
+~~~
+
+!id: 6aPO3ZuPmQ
+!front: \[ \mathscr{L} \{ \sinh(at) \} \]
+!back: \[ \frac{a}{s^2 - a^2} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+    \mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+    \mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+    \mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: wDd9biq9eq
+!front: \[ \mathscr{L} \{ \cosh(at) \} \]
+!back: \[ \frac{s}{s^2 - a^2} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+    \mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+    \mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+    \mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: APrkyWHpY9
+!front: \[ \mathscr{L} \{ e^{ct} \} \]
+!back: \[ \frac{1}{s - c} \]
+~~~
+
+!id: EhODildxyc
+!front: \[ \mathscr{L} \{ e^{ct} t^n \}, \, n = 1, 2, 3, \ldots \]
+!back: \[ \frac{n!}{(s - c)^{n + 1}} \]
+~~~
+
+!id: h2YfE3Kcfk
+!front: \[ \mathscr{L} \{ e^{ct} \sin(at) \} \]
+!back: \[ \frac{a}{(s - c)^2 + a^2} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+    \mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+    \mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+    \mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: Wb7fchDmCP
+!front: \[ \mathscr{L} \{ e^{ct} \cos(at) \} \]
+!back: \[ \frac{s - c}{(s - c)^2 + a^2} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+    \mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+    \mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+    \mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: JPst7GCP0E
+!front: \[ \mathscr{L} \{ e^{ct} \sinh(at) \} \]
+!back: \[ \frac{a}{(s - c)^2 - a^2} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+    \mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+    \mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+    \mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: wyNWqYlFyq
+!front: \[ \mathscr{L} \{ e^{ct} \cosh(at) \} \]
+!back: \[ \frac{s - c}{(s - c)^2 - a^2} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+    \mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+    \mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+    \mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: glAQ8aaVKP
+!front: \[ \mathscr{L} \{ e^{ct} f(t) \} \]
+!back: \[ F(s - c) \]
+~~~
+
+!id: gqdLJbeebN
+!front: \[ \mathscr{L} \{ \delta (t - c) \}, \quad c \ge 0 \]
+!back: \[ e^{-cs} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ \delta (t - c) \} &= e^{-cs} \\
+    \mathscr{L} \{ u(t - c) \} &= e^{-cs} \frac{1}{s}
+\end{align*}
+\]
+~~~
+
+!id: y3ZWYAOBIR
+!front: \[ \mathscr{L} \{ u(t - c) \}, \quad c \ge 0 \]
+!back: \[ e^{-cs} \frac{1}{s} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ \delta (t - c) \} &= e^{-cs} \\
+    \mathscr{L} \{ u(t - c) \} &= e^{-cs} \frac{1}{s}
+\end{align*}
+\]
+~~~
+
+!id: jFPp0XWKuj
+!front: \[ \mathscr{L} \{ u(t - c) f(t - c) \}, \quad c \ge 0 \]
+!back: \[ e^{-cs} F(s) \]
+~~~
+
+!id: DBrCzTevVh
+!front: \[ \mathscr{L} \left\{ \frac{f(t)}{t} \right\} \]
+!back: \[ \int_{s}^{\infty} F(u) \, du \]
+~~~
+
+!id: h4Kgni8vFp
+!front: \[ \mathscr{L} \left\{ \int_{0}^{t} f(u) \, du \right\} \]
+!back: \[ \frac{F(s)}{s} \]
+~~~
+
+!id: f1zJutGe2P
+!front: \[ \mathscr{L} \{ f'(t) \} \]
+!back: \[ s F(s) - f(0) \]
+~~~
+
+!id: jTbt1RuKOo
+!front: \[ \mathscr{L} \{ f''(t) \} \]
+!back: \[ s^2 F(s) - s f(0) - f'(0) \]
+~~~

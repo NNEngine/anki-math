@@ -1,0 +1,523 @@
+\section{Riemann and Darboux Integration}
+
+\subsection{Foundational Definitions}
+
+\begin{enumerate}
+  \item What is a partition of an interval $[a,b]$?
+  \item Define the norm (mesh size) of a partition.
+  \item What is a tagged partition?
+  \item Define a Riemann sum.
+  \item State the definition of the Riemann integral using Riemann sums.
+  \item Define the upper Darboux sum.
+  \item Define the lower Darboux sum.
+  \item What are the quantities
+    \[
+      M_i = \sup_{x \in [x_{i-1},x_i]} f(x)
+    \]
+    and
+    \[
+      m_i = \inf_{x \in [x_{i-1},x_i]} f(x)?
+    \]
+  \item Define the upper Darboux integral.
+  \item Define the lower Darboux integral.
+  \item State the definition of Darboux integrability.
+  \item Why must a function be bounded to be Riemann integrable?
+  \item Why must a function be bounded to be Darboux integrable?
+\end{enumerate}
+
+\subsection{Conceptual Understanding}
+
+\begin{enumerate}[resume]
+  \item What is the geometric intuition behind a Riemann sum?
+  \item What is the geometric intuition behind upper and lower Darboux sums?
+  \item Why does refining a partition generally improve approximation quality?
+  \item What happens to lower Darboux sums when a partition is refined?
+  \item What happens to upper Darboux sums when a partition is refined?
+  \item Why is
+    \[
+      L(f,P) \le U(f,P)
+    \]
+    always true?
+  \item Explain why
+    \[
+      \sup_P L(f,P) \le \inf_P U(f,P).
+    \]
+  \item What does it mean geometrically when the upper and lower integrals are equal?
+  \item Why are Darboux sums often considered technically simpler than Riemann sums?
+  \item Why are Riemann sums closer to the historical intuition of integration?
+\end{enumerate}
+
+\subsection{Comparisons Between Riemann and Darboux Integration}
+
+\begin{enumerate}[resume]
+  \item What is the main difference between a Riemann sum and a Darboux sum?
+  \item In a Riemann sum, how are sample points chosen?
+  \item In a Darboux sum, why are sample points unnecessary?
+  \item Which theory uses arbitrary sample points explicitly?
+  \item Which theory uses suprema and infima on subintervals?
+  \item What role does the partition norm play in Riemann integration?
+  \item What role does partition refinement play in Darboux integration?
+  \item State the theorem relating Riemann integrability and Darboux integrability.
+  \item Why are the two theories equivalent for bounded functions on closed intervals?
+  \item Can two different tagged partitions with the same underlying partition produce different Riemann sums?
+  \item Can two different Darboux sums exist for the same partition?
+  \item How do upper and lower Darboux sums bound all possible Riemann sums?
+  \item Explain how Darboux integration avoids explicit limits of sums.
+  \item Explain how Riemann integration encodes convergence directly through limits.
+\end{enumerate}
+
+\subsection{Theorems and Properties}
+
+\begin{enumerate}[resume]
+  \item State the linearity property of the integral.
+  \item State the additivity over intervals property.
+  \item State the monotonicity property of the integral.
+  \item If $f$ is continuous on $[a,b]$, why is it integrable?
+  \item Why is every monotone function on $[a,b]$ integrable?
+  \item State a criterion for integrability involving discontinuities.
+  \item What is the relationship between measure-zero discontinuity sets and integrability?
+  \item Why is the Dirichlet function not Riemann integrable?
+  \item Why is the characteristic function of the rationals discontinuous everywhere?
+  \item Give an example of a function that is discontinuous but still Riemann integrable.
+  \item Why is a function with finitely many discontinuities integrable?
+  \item What happens to the integral if two functions differ only on finitely many points?
+  \item What happens if two functions differ only on a measure-zero set?
+\end{enumerate}
+
+\subsection{Technical Manipulation}
+
+\begin{enumerate}[resume]
+  \item Compute the lower and upper Darboux sums for a constant function.
+  \item Compute the lower and upper Darboux sums for $f(x)=x$ on $[0,1]$ using a uniform partition.
+  \item Derive the Riemann sum for $f(x)=x^2$ on $[0,1]$.
+  \item Show directly that
+    \[
+      \int_0^1 x\,dx = \frac12
+    \]
+    using Riemann sums.
+  \item Show directly that
+    \[
+      \int_0^1 x\,dx = \frac12
+    \]
+    using Darboux sums.
+  \item For a uniform partition, how do you compute
+    \[
+      \Delta x?
+    \]
+  \item Why do continuous functions attain maxima and minima on closed intervals?
+  \item Why is compactness important in Darboux integration?
+  \item What is the difference between taking a supremum over all lower sums and taking a limit?
+  \item Why does the existence of arbitrarily close upper and lower sums imply integrability?
+\end{enumerate}
+
+\subsection{Interpreting the Integral}
+
+\begin{enumerate}[resume]
+  \item What does the expression
+    \[
+      \sum_i f(x_i)\Delta x_i
+    \]
+    represent before assigning any geometric or physical interpretation to it?
+  \item Why is the integral fundamentally an accumulation operator rather than specifically an area operator?
+  \item In the area interpretation of the integral, what do the quantities
+    \[
+      f(x_i), \quad \Delta x_i, \quad f(x_i)\Delta x_i
+    \]
+    represent geometrically?
+  \item Why does
+    \[
+      f(x_i)\Delta x_i
+    \]
+    approximate the area of a thin rectangle?
+  \item What happens to the Riemann sum as
+    \[
+      \max \Delta x_i \to 0?
+    \]
+  \item Why does the definite integral emerge as a limit of Riemann sums?
+  \item If
+    \[
+      g'(x)=f(x),
+    \]
+    why does
+    \[
+      f(x)\Delta x
+    \]
+    approximate the small change
+    \[
+      \Delta g?
+    \]
+  \item What is the conceptual meaning of
+    \[
+      dg = g'(x)\,dx?
+    \]
+  \item Why can the same expression
+    \[
+      f(x)\Delta x
+    \]
+    be interpreted both as rectangle area and as accumulated change?
+  \item What determines the interpretation of the integrand~\(f(x)\)?
+  \item Why is the equality
+    \[
+      \int_a^b g'(x)\,dx = g(b)-g(a)
+    \]
+    an accumulation statement?
+  \item In the Fundamental Theorem of Calculus, what exactly is being accumulated?
+  \item Why does integrating a derivative recover net change?
+  \item How does the telescoping intuition appear in
+    \[
+      \sum \Delta g_i?
+    \]
+  \item Define
+    \[
+      A(x)=\int_a^x f(t)\,dt.
+    \]
+    What does~\(A(x)\) represent geometrically?
+  \item Why does increasing~\(x\) by a small amount~\(h\) add approximately
+    \[
+      f(x)h
+    \]
+    to the accumulated area?
+  \item Use the difference quotient to explain why
+    \[
+      A'(x)=f(x).
+    \]
+  \item Why does the identity
+    \[
+      A'(x)=f(x)
+    \]
+    connect the area interpretation to the antiderivative interpretation?
+  \item Why is the Fundamental Theorem of Calculus fundamentally a statement that differentiation and integration are inverse operations?
+  \item How does the notion of ``local rate'' connect to ``global accumulation''?
+  \item What is the difference between:
+    \begin{itemize}
+      \item a function value,
+      \item a derivative,
+      \item a differential,
+      \item an accumulated quantity?
+    \end{itemize}
+  \item Why is
+    \[
+      \int_a^b f(x)\,dx
+    \]
+    not intrinsically an area?
+  \item Give examples where the integral represents:
+    \begin{itemize}
+      \item distance,
+      \item mass,
+      \item charge,
+      \item probability,
+      \item energy.
+    \end{itemize}
+  \item In each example above, what plays the role of:
+    \begin{itemize}
+      \item density/rate,
+      \item small measure,
+      \item accumulated total?
+    \end{itemize}
+  \item Explain the pattern:
+    \[
+      \text{density} \times \text{small measure}
+      \to
+      \text{accumulated quantity}.
+    \]
+  \item Why is the rectangle picture only one geometric realization of integration?
+  \item What is the conceptual difference between:
+    \[
+      f(x)
+      \quad \text{and} \quad
+      f(x)\,dx?
+    \]
+  \item Why is
+    \[
+      dx
+    \]
+    best understood as ``a tiny increment of the independent variable''?
+  \item Why is the statement
+    \[
+      dg=g'(x)\,dx
+    \]
+    more fundamental than the rectangle interpretation?
+  \item What does the Fundamental Theorem of Calculus reveal about the relationship between local structure and global structure?
+\end{enumerate}
+
+\subsection{Integrals and Euler's Method}
+
+\begin{enumerate}[resume]
+  \item Consider the initial value problem
+    \[
+      y'(x)=f(x,y(x)), \qquad y(a)=y_0.
+    \]
+    Write down the forward Euler update on a partition
+    \[
+      a=x_0<x_1<\cdots<x_n=b
+    \]
+    and explain why one step has the form
+    \[
+      y_{i+1}-y_i \approx f(x_i,y_i)\,\Delta x_i.
+    \]
+  \item Why is a single Euler update naturally interpreted as an accumulation of a local rate over a small interval?
+  \item Explain why it is reasonable to call
+    \[
+      y_{i+1}=y_i+f(x_i,y_i)\,\Delta x_i
+    \]
+    an integration step rather than merely an algebraic update.
+  \item Sum the Euler increments over many steps and derive
+    \[
+      y_n
+      =
+      y_0+\sum_{i=0}^{n-1} f(x_i,y_i)\,\Delta x_i.
+    \]
+    What is the conceptual meaning of this formula, and how does the initial value~\(y_0\) enter as the starting accumulated amount?
+  \item Why does the exact solution of
+    \[
+      y'(x)=f(x,y(x)), \qquad y(a)=y_0,
+    \]
+    satisfy the integral equation
+    \[
+      y(x)=y_0+\int_a^x f(t,y(t))\,dt?
+    \]
+    How does Euler's method mimic this identity?
+  \item Why is the solution curve of an ODE often called an integral curve?
+    What is being integrated, and in what sense is the curve determined by that integration?
+  \item For a general first-order ODE
+    \[
+      y'=f(x,y),
+    \]
+    what information does the slope field encode?
+    Why does prescribing an initial value
+    \[
+      y(a)=y_0
+    \]
+    select one particular curve from that field?
+  \item In the autonomous case
+    \[
+      y'=F(y),
+    \]
+    how does the interpretation of an integral curve differ from the case
+    \[
+      y'=f(x,y)?
+    \]
+    What remains the same?
+  \item Show that an ordinary definite integral is the special case of the ODE
+    \[
+      y'(x)=g(x), \qquad y(a)=y_0,
+    \]
+    where the right-hand side does not depend on~\(y\).
+    What is the exact solution?
+  \item Let~\(G\) be one antiderivative of~\(g\), so that
+    \[
+      G'(x)=g(x).
+    \]
+    Why are all solutions of
+    \[
+      y'(x)=g(x)
+    \]
+    of the form
+    \[
+      y(x)=G(x)+C?
+    \]
+    How does the initial condition
+    \[
+      y(a)=y_0
+    \]
+    determine the value of~\(C\)?
+  \item Compare the slope field of a general ODE
+    \[
+      y'=f(x,y)
+    \]
+    with the slope field of
+    \[
+      y'=g(x).
+    \]
+    Why is the latter vertically uniform, meaning that at a fixed~\(x\) the slope is the same at every height~\(y\)?
+  \item Why does the vertical uniformity of the slope field for
+    \[
+      y'=g(x)
+    \]
+    imply that all integral curves are vertical translates of one another?
+    How does this connect to the additive constant~\(C\) in
+    \[
+      y=G(x)+C?
+    \]
+  \item Apply Euler's method to
+    \[
+      y'(x)=g(x), \qquad y(a)=y_0.
+    \]
+    Why does the scheme become
+    \[
+      y_{i+1}=y_i+g(x_i)\,\Delta x_i?
+    \]
+  \item Iterate the previous update and show that
+    \[
+      y_n
+      =
+      y_0+\sum_{i=0}^{n-1} g(x_i)\,\Delta x_i.
+    \]
+    Why is this now literally a Riemann sum plus the initial value, rather than only an Euler approximation?
+  \item What special feature makes the discrete accumulation for
+    \[
+      y'=g(x)
+    \]
+    telescope exactly into
+    \[
+      y_n-y_0=\sum_{i=0}^{n-1} (y_{i+1}-y_i)?
+    \]
+    Why does the same telescoping identity not by itself turn a general Euler method for
+    \[
+      y'=f(x,y)
+    \]
+    into a classical Riemann sum for a known function of~\(x\) alone?
+  \item In the case
+    \[
+      y'(x)=g(x),
+    \]
+    under what conditions on the partition and sample points does
+    \[
+      \sum_{i=0}^{n-1} g(x_i)\,\Delta x_i
+    \]
+    converge to
+    \[
+      \int_a^b g(x)\,dx?
+    \]
+    State the connection with the definition of Riemann integrability.
+  \item If
+    \[
+      y'(x)=f(x,y)
+    \]
+    does depend on~\(y\), what breaks in the attempt to interpret Euler's method as an ordinary Riemann sum in the variable~\(x\) alone?
+    Which additional unknown quantity is being approximated at every step?
+  \item Compare these two viewpoints:
+    \[
+      \int_a^b g(x)\,dx
+      \quad \text{and} \quad
+      y(b)-y(a) \text{ for } y'=f(x,y).
+    \]
+    In what sense are both global accumulations of local data, and in what sense is the second problem structurally more implicit?
+  \item If two solutions of
+    \[
+      y'=g(x)
+    \]
+    have different initial values, why does their difference remain constant in~\(x\)?
+    Why is the analogous statement usually false for a general ODE
+    \[
+      y'=f(x,y)?
+    \]
+\end{enumerate}
+
+\section{The Connection Between the Net Change Theorem, Differential Equations, and Euler's Method}
+
+The connection between the net change theorem, differential equations, and Euler's method is structural.
+They are different views of the same fundamental operation:
+
+\begin{itemize}
+  \item Differential equations describe \emph{local rates of change}.
+  \item Integration accumulates those local changes into a \emph{global change}.
+  \item Euler's method numerically performs that accumulation step-by-step.
+\end{itemize}
+
+The net change theorem is the bridge connecting these ideas.
+
+Suppose that
+\[
+  F'(t)=f(t).
+\]
+
+Then the net change theorem states:
+\[
+  F(b)-F(a)=\int_a^b f(t)\,dt \quad \text{or} \quad F(b)=F(a)+\int_a^b f(t)\,dt.
+\]
+
+The interpretation is:
+
+\begin{itemize}
+  \item \(f(t)\) is the instantaneous rate of change,
+  \item the integral accumulates infinitesimal changes,
+  \item the result is the total change in \(F\).
+\end{itemize}
+
+Now consider a differential equation:
+\[
+  y'(t)=f(t,y(t)).
+\]
+
+This equation states that the instantaneous change of the unknown function \(y\) is determined by the function \(f\).
+
+Applying the net change theorem to the unknown solution \(y\), we integrate both sides from \(t_0\) to \(t\):
+\[
+  y(t)-y(t_0)=\int_{t_0}^t f(s,y(s))\,ds.
+\]
+
+If the initial value is
+\[
+  y(t_0)=y_0,
+\]
+then:
+\[
+  y(t)=y_0+\int_{t_0}^t f(s,y(s))\,ds.
+\]
+
+This equation has a direct interpretation:
+
+\begin{itemize}
+  \item Start with the initial value \(y_0\),
+  \item accumulate all infinitesimal changes \(f(s,y(s))\,ds\),
+  \item obtain the final value \(y(t)\).
+\end{itemize}
+
+Thus, a differential equation is fundamentally an accumulation law.
+
+\subsection*{Euler's Method as Numerical Integration}
+
+Euler's method arises by approximating the integral with a Riemann sum.
+Take a small step size \(h\). Over the interval \([t_n,t_n+h]\),
+\[
+  y(t_{n+1})-y(t_n)
+  =
+  \int_{t_n}^{t_n+h} f(s,y(s))\,ds.
+\]
+
+Euler's approximation assumes that the slope remains approximately constant over this short interval:
+\[
+  f(s,y(s))
+  \approx
+  f(t_n,y_n).
+\]
+
+Therefore,
+\[
+  \int_{t_n}^{t_n+h} f(s,y(s))\,ds
+  \approx
+  h\,f(t_n,y_n).
+\]
+
+Substituting this approximation gives Euler's update rule:
+\[
+  y_{n+1}=y_n+h\,f(t_n,y_n).
+\]
+
+This is not merely inspired by integration. It \emph{is} numerical integration.
+Each Euler step performs the following process:
+
+\begin{enumerate}
+  \item Measure the current rate of change,
+  \item assume it remains roughly constant over a short interval,
+  \item accumulate the resulting small change,
+  \item repeat.
+\end{enumerate}
+
+Thus, every Euler step is a discrete version of the net change theorem:
+\[
+  \text{new value}
+  =
+  \text{old value}
+  +
+  \text{accumulated change}.
+\]
+
+This explains why:
+
+\begin{itemize}
+  \item numerical ODE solving is often called \emph{integration},
+  \item solution curves are called \emph{integral curves},
+  \item ODE solvers are often called \emph{integrators}.
+\end{itemize}
